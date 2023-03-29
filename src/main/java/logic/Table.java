@@ -21,12 +21,12 @@ public class Table {
     private void printTable(int[][] table) {
         for (int y = 0; y < table.length; y++) {
             for (int x = 0; x < table[y].length; x++) {
-                System.out.printf("%4d %s", table[y][x], "|");
+                System.out.printf("%5d |", table[y][x]);
             }
             System.out.println("");
-            for (int i = 0; i < table[y].length; i++) {
-                System.out.printf("%s", "______");
-            }
+            String string = "_______";
+            int count = table[y].length;
+            System.out.print(string.repeat(count));
             System.out.println("");
         }
     }
